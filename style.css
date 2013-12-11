@@ -47,7 +47,7 @@ h1 {
                           letter-spacing: 0.1em;
                           line-height: 2em; }
 
-                          @media screen and (max-width: 768px) {
+                          @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
                             #banner {
                               padding-top: 20px;
                               padding-bottoM: 20px;   }
@@ -63,7 +63,7 @@ h1 {
                                         font-size: 16px;   }
                                         #screenshot, #plaintext, #tintedtext, #footer {
                                           padding: 20px 0px;
-                                          font-size: 14px;
+                                          font-size: 10px;
                                           letter-spacing: 0.05em;
                                           line-height: 1.3em;   }
                                           code, pre {
