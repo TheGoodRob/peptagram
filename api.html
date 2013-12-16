@@ -49,7 +49,7 @@
     <div id='plaintext'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-8'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
 
 <h1>Python Programming API</h1>
 <h3>Basic Data Structure: proteins</h3>
@@ -109,11 +109,23 @@ spectrum:
     - 503.4
     - 82.3
 </code></pre>
+<ul>
+<li>
 <p><code>i</code> gives 0-based position of the peptide, and should match that of the full sequence.</p>
+</li>
+<li>
 <p><code>intensity</code> gives a value from -1.0 to 1.0, which is used to generate colors in the experiment-comparison mode. The coloring goes from a high color associated with 1.0 to a neutral color associated with 0.0, and down to a color associated with -1.0</p>
+</li>
+<li>
 <p><code>mask</code> gives an optional value to control masking for certain peptide-spectrum matches. The webapp can accept several master <code>mask</code> values. When a master <code>mask</code> value is selected, all peptide-spectrum matches with higher <code>mask</code> values are hidden.</p>
+</li>
+<li>
 <p><code>spectrum</code> gives a list peaks that will be used in the spectrum viewer. The first number corresponds to the m/z value and the second, to the intensity. In general, only the top 50 are read in, but of course you can add more, which will probably bloat the javascript file.</p>
+</li>
+<li>
 <p><code>modifications</code> is an optional field that describes any amino acid modifications in the peptide. It is a list of dictionaries. In each dictionary, the <code>i</code> gives the position, and <code>mass</code> gives the mass of the modified amino acid. To allow for N-terminal modifications, <code>i</code> can take the value -1. For C-terminal modifiactions, <code>i</code> can take the value n where n is the length of the sequence.</p>
+</li>
+</ul>
 <h3>Sequence identifiers</h3>
 <p>As discussed in the Examples, handling sequence identifiers (seqids) correctly is a recurring problem in bioinformatics. If seqids are not formatted correctly, it becomes impossible to match data from different sources. So it useful if we can format or transform all seqids into a consistent format. This idea of passing in seqid transforming functions is available in all parts of <code>peptagram</code>. This way you can organize the seqids as you read them in.</p>
 <p>In <code>peptagram.proteins</code>, there is a useful convenience function <code>change_seqids_in_proteins</code> that transforms the seqids found in a <code>proteins</code> datastructure, including the alternate seqids found in <code>other_seqids</code>. It takes a any string function <code>clean_seqid</code> and transforms all seqids found in <code>proteins</code> to this function, including the protein seqid keys at the top level.</p>
@@ -157,10 +169,20 @@ source_labels = [os.path.basename(name) for name in source_names]
   'mask_labels': ['1.0'],
 }
 </code></pre>
+<ul>
+<li>
 <p><code>title</code> gives the title that will be displayed across the top of the web-app</p>
+</li>
+<li>
 <p><code>proteins</code> is the dictionary that you generated consistent with the structure given above</p>
+</li>
+<li>
 <p><code>source_labels</code> is an optional list of the names of the different experiments that will be used in the experiment-comparison mode</p>
+</li>
+<li>
 <p><code>mask_labels</code> are a list of values that will be used to mask the display of the peptides. If this list empty, then no masking will be offered.</p>
+</li>
+</ul>
 <p>Finally, to generate the webapp for the single-experiment mode:</p>
 <p>And for the experiment-comparison mode:</p>
 <pre><code>peptagram.proteins.make_peptograph_directory(
@@ -172,7 +194,7 @@ source_labels = [os.path.basename(name) for name in source_names]
     <div id='footer'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-8'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
 <p><code>peptagram</code> was developed at the <a href="http://monash.edu/proteomics">Monash Proteomics Facility</a>.  <br>
 Source code hosted at <a href="http://github.com/boscoh/peptagram">http://github.com/boscoh/peptagram</a> under BSD license.   <br>
 &copy; 2013. Bosco K. Ho.</p>          </div>

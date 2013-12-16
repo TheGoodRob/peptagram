@@ -1,13 +1,16 @@
 h1
-  font-size: 50px
+  font-size: 40px
 h2 
-  font-size: 45px
-h3
-  margin-top: 60px
-  border-bottom: 1px solid #BBB
+  font-size: 35px
 h1, h2, h3, h4, h5, h6, h7
   font-weight: 100
   letter-spacing: 0.1em
+h3
+  text-transform: uppercase
+  font-weight: 500
+  font-size: 18px
+  color: #AAA
+  border-bottom: 1px solid #BBB
 .navbar-static-top
   margin-bottom: 0
 #banner
@@ -26,6 +29,9 @@ h1, h2, h3, h4, h5, h6, h7
   color: #CCC
 #plaintext
   background-color: #F9F9FF
+#plaintext h3,
+#tintedtext h3
+  padding-top: 1em
 #footer
   background-color: #336
   color: #999
@@ -37,9 +43,16 @@ h1, h2, h3, h4, h5, h6, h7
   padding-bottom: 40px
   font-size: 16px
   letter-spacing: 0.1em
-  line-height: 2em
+  line-height: 1.7em
+code
+  font-size: 16px
+  letter-spacing: 0em
+pre
+  line-height: 1.2em
+  letter-spacing: 0em
+  color: #777
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+@media (max-width : 767px)
   #banner
     padding-top: 20px
     padding-bottoM: 20px
@@ -51,6 +64,8 @@ h1, h2, h3, h4, h5, h6, h7
     font-size: 20px
   h3
     font-size: 18px
+  h1, h2, h3
+    margin-top: 0px
   #banner h4
     font-size: 16px
   #screenshot,
@@ -58,9 +73,10 @@ h1, h2, h3, h4, h5, h6, h7
   #tintedtext,
   #footer
     padding: 20px 0px
-    font-size: 10px
+    font-size: 14px
     letter-spacing: 0.05em
-    line-height: 1.3em
+    line-height: 1.5em
   code, 
   pre
     font-size: 10px
+    line-height: 1.2em

@@ -34,7 +34,7 @@
     #plaintext
       .container
         .row
-          .col-lg-8
+          .col-lg-6.col-md-7.col-sm-8
             :markdown
 
               # Python Programming API
@@ -104,15 +104,15 @@
                       - 503.4
                       - 82.3
 
-              `i` gives 0-based position of the peptide, and should match that of the full sequence.
+              - `i` gives 0-based position of the peptide, and should match that of the full sequence.
 
-              `intensity` gives a value from -1.0 to 1.0, which is used to generate colors in the experiment-comparison mode. The coloring goes from a high color associated with 1.0 to a neutral color associated with 0.0, and down to a color associated with -1.0
+              - `intensity` gives a value from -1.0 to 1.0, which is used to generate colors in the experiment-comparison mode. The coloring goes from a high color associated with 1.0 to a neutral color associated with 0.0, and down to a color associated with -1.0
 
-              `mask` gives an optional value to control masking for certain peptide-spectrum matches. The webapp can accept several master `mask` values. When a master `mask` value is selected, all peptide-spectrum matches with higher `mask` values are hidden.
+              - `mask` gives an optional value to control masking for certain peptide-spectrum matches. The webapp can accept several master `mask` values. When a master `mask` value is selected, all peptide-spectrum matches with higher `mask` values are hidden.
 
-              `spectrum` gives a list peaks that will be used in the spectrum viewer. The first number corresponds to the m/z value and the second, to the intensity. In general, only the top 50 are read in, but of course you can add more, which will probably bloat the javascript file.
+              - `spectrum` gives a list peaks that will be used in the spectrum viewer. The first number corresponds to the m/z value and the second, to the intensity. In general, only the top 50 are read in, but of course you can add more, which will probably bloat the javascript file.
 
-              `modifications` is an optional field that describes any amino acid modifications in the peptide. It is a list of dictionaries. In each dictionary, the `i` gives the position, and `mass` gives the mass of the modified amino acid. To allow for N-terminal modifications, `i` can take the value -1. For C-terminal modifiactions, `i` can take the value n where n is the length of the sequence.
+              - `modifications` is an optional field that describes any amino acid modifications in the peptide. It is a list of dictionaries. In each dictionary, the `i` gives the position, and `mass` gives the mass of the modified amino acid. To allow for N-terminal modifications, `i` can take the value -1. For C-terminal modifiactions, `i` can take the value n where n is the length of the sequence.
 
               ### Sequence identifiers 
 
@@ -173,13 +173,13 @@
                     'mask_labels': ['1.0'],
                   }
 
-              `title` gives the title that will be displayed across the top of the web-app
+              - `title` gives the title that will be displayed across the top of the web-app
 
-              `proteins` is the dictionary that you generated consistent with the structure given above
+              - `proteins` is the dictionary that you generated consistent with the structure given above
 
-              `source_labels` is an optional list of the names of the different experiments that will be used in the experiment-comparison mode
+              - `source_labels` is an optional list of the names of the different experiments that will be used in the experiment-comparison mode
 
-              `mask_labels` are a list of values that will be used to mask the display of the peptides. If this list empty, then no masking will be offered.
+              - `mask_labels` are a list of values that will be used to mask the display of the peptides. If this list empty, then no masking will be offered.
 
               Finally, to generate the webapp for the single-experiment mode:
 
@@ -190,7 +190,7 @@
     #footer
       .container
         .row
-          .col-lg-8
+          .col-lg-6.col-md-7.col-sm-8
             :markdown
                 `peptagram` was developed at the [Monash Proteomics Facility](http://monash.edu/proteomics).  <br>
                 Source code hosted at <http://github.com/boscoh/peptagram> under BSD license.   <br>

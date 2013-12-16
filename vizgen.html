@@ -46,13 +46,40 @@
         </div>
       </div>
     </div>
+    <div id='tintedtext'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
+
+<h1>Generating Visualizations</h1>
+<h3>Installation</h3>
+<p>To generate visualizations from <code>peptagram</code>, you must first install <a href="http://python.org">python</a> and the python installer <a href="http://www.pip-installer.org/en/latest/installing.html">pip</a>.</p>
+<p>Then, to install <code>peptagram</code> on the command-line:</p>
+<pre><code>&gt; pip install peptagram
+</code></pre>
+<p>This should automatically install <code>peptagram</code> and its python dependencies: <a href="https://github.com/pymzml/pymzML">pymzml</a> and <a href="https://github.com/boscoh/uniprot">uniprot</a>.</p>          </div>
+        </div>
+      </div>
+    </div>
     <div id='plaintext'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-8'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
 
-<h1>Generating Visualizations</h1>
-<p>In proteomics, as you may very well know, there are many different formats, each choosing to describe sets of information. <code>peptagram</code> currently provide parsers to work with:</p>
+<h1>Worked Examples</h1>
+<p><code>peptagram</code> requires different combination of data to successfully generate a visualization. Here is a download of several examples:</p>
+<p>&nbsp;&nbsp;&nbsp;
+<a class='btn btn-primary' type='button' href='http://monash.edu/proteomics/peptagram/examples-0.1a.zip'>
+  Visualization Generation Examples (125 MB)
+</a></p>
+<p>To generate an HTML5 visualization, <code>peptagram</code> requires proteomics data in the form of:</p>
+<ol>
+<li>peptide-spectrum matches</li>
+<li>protein groupings</li>
+<li>sequences of identified proteins</li>
+<li>tandem MS/MS spectra</li>
+</ol>
+<p>Currently <code>peptagram</code> works withe following proteomics data format:</p>
 <ul>
 <li>mzML</li>
 <li>Morpheus</li>
@@ -62,30 +89,16 @@
 <li>MaxQuant</li>
 <li>fasta</li>
 </ul>
-<p>For a fully realized visualization, <code>peptagram</code> requires:</p>
-<ol>
-<li>peptide-spectrum matches</li>
-<li>protein groupings</li>
-<li>sequences of identified proteins</li>
-<li>tandem MS/MS spectra</li>
-</ol>
-<p>As different formats contain different subsets of information, for a functional <code>peptagram</code> visualiation, different data files will be needed. In the following, we will describe a number of cases we have got working.</p>
-<p>As the examples are quite large, you should download them separately from:</p>            &nbsp;&nbsp;&nbsp;
-            <a class='btn btn-primary' href='http://monash.edu/proteomics/peptagram/examples-0.1a.zip' type='button'>
-              Download Examples (~300MB)
-
-
-            </a>
-          </div>
+<p>Below are examples of <code>peptagram</code> generation with a few common cases.</p>          </div>
         </div>
       </div>
     </div>
     <div id='tintedtext'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-8'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
 
-<h3>Ex: Morpheus and mzML</h3>
+<h3>Example: Morpheus and mzML</h3>
 <p><code>morpheus</code> is a search engine designed for high-quality data, where the assumption that MS/MS peaks are well-resolved results in much better performance. As <code>morpheus</code> does not come with a bundled viewer, <code>peptagram</code> provides a unique tool to view <code>morpheus</code> results.
 First create a Python script in a text editor with a name like <code>morpheus_example.py</code>. This will read a set of <code>morpheus</code> protein groupings and match the proteins with peptide-spectrum matches. Make sure the filenames are correct relative to the directory where you save <code>morpheus_example.py</code>.</p>
 <p><code>morpheus</code> generates protein groupings and the nice thing about <code>morpheus</code> is that protein sequences and descriptions are included in the <code>.protein_group.tsv</code> files. This means the primary data structure <code>proteins</code> can be generated with the <code>morpheus</code> <code>.protein_groups.tsv</code> and <code>.PSMs.tsv</code> files. Also required is the <code>modifications.tsv</code> file:</p>
@@ -116,11 +129,11 @@ peptagram.proteins.make_proteins_directory(data, out_dir)
 </code></pre>
 <p>A quick description of the fields:</p>
 <ul>
-<li>title: the text that will be displayed at the top of the web-app</li>
-<li>proteins: the proteins data structure, in the future you may want to construct your own</li>
-<li>source_labels: in comparison mode, this is the label for the different proteomics experiment. ignored if it is an empty list</li>
-<li>color_names: in comparison mode, the labels for the colors in the legend</li>
-<li>mask_labels: alternative masking for the display of higher accuracies</li>
+<li><code>title</code>: the text that will be displayed at the top of the web-app</li>
+<li><code>proteins</code>: the proteins data structure, in the future you may want to construct your own</li>
+<li><code>source_labels</code>: in comparison mode, this is the label for the different proteomics experiment. ignored if it is an empty list</li>
+<li><code>color_names</code>: in comparison mode, the labels for the colors in the legend</li>
+<li><code>mask_labels</code>: alternative masking for the display of higher accuracies</li>
 </ul>
 <p>On the command-line, run the script to generate the visualization:</p>
 <pre><code>python morpheus_example.py
@@ -131,9 +144,9 @@ peptagram.proteins.make_proteins_directory(data, out_dir)
     <div id='plaintext'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-8'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
 
-<h3>Ex: TPP with fasta and mzML</h3>
+<h3>Example: TPP with fasta and mzML</h3>
 <p>The Transatlantic Protein Pipeline (TPP) represents one of the largest open-source proteomics toolkits. As the TPP have pushed for their <code>.protXML</code> and <code>.pepXML</code> formats as standards. <code>.protXML</code> and <code>.pepXML</code> search results can come from any number of search-engines. <code>peptagram</code> can generate visualizations from these files if the protein sequences are also available in the form of <code>.fasta</code> files:</p>
 <pre><code>import peptagram.tpp
 import peptagram.mzml
@@ -183,10 +196,10 @@ peptagram.proteins.make_proteins_directory(data, 'out/tpp-pr')
     <div id='tintedtext'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-8'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
 
 
-<h3>Ex: X!Tandem in TPP</h3>
+<h3>Example: X!Tandem in TPP</h3>
 <p>The default search-engine that comes with the TPP is X!Tandem. It is easy to generate  visualizations with <code>.protXML</code> and <code>.pepXML</code> files that have been generated from <code>.tandem</code> files. This is because <code>.tandem</code> files contain protein sequences and MS/MS peaks.</p>
 <pre><code>proteins, source_names = peptagram.tpp.get_proteins_and_sources(
     'xtandem/interact.prot.xml',
@@ -219,9 +232,9 @@ peptagram.proteins.make_proteins_directory(data, 'out/tpp-pr')
     <div id='plaintext'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-8'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
 
-<h3>Ex: TPP with fasta from Mascot</h3>
+<h3>Example: TPP with fasta from Mascot</h3>
 <p>Mascot is one of the oldest search engines and has gone through considerable changes over the years. Here, we have a parser for the Mascot <code>.dat</code> format, which is miss-mash of mime-type, xml, and random acts of text. Mascot however, does not group proteins, and mascot <code>.dat</code> files are often run through the TPP. Here, <code>peptagram</code> can read TPP-generated <code>.pepXML</code> and <code>.protXMl</code> files, and extract the MS/MS peaks from the mascot <code>.dat</code> files. Furthermore, the protein sequences must be read from a .fasta file.</p>
 <p>So first we read in the <code>proteins</code> data structure from the .pepXML and .protXML files:</p>
 <pre><code>import peptagram.parse
@@ -284,9 +297,9 @@ peptagram.proteins.make_peptograph_directory(
     <div id='tintedtext'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-8'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
 
-<h3>Ex: MaxQuant</h3>
+<h3>Example: MaxQuant</h3>
 <p>We have used MaxQuant mainly for its ability to do isotype-labelling comparisons (SILAC for instance). Maxquant results are stored as tab-separated-value files as <code>.txt</code> files in a summary directory. This contains protein groups, peptide-spectrum matches, and a list of matched peaks. Nevertheless, this list of matched peaks is not useful as it does not give a visual representation of the fit of the data to the raw spectra.</p>
 <p>Nevertheless, this can be read as:</p>
 <pre><code>import peptagram.maxquant
@@ -318,7 +331,7 @@ peptagram.proteins.load_fasta_db_into_proteins(
     <div id='footer'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-8'>
+          <div class='col-lg-6 col-md-7 col-sm-8'>
 <p><code>peptagram</code> was developed at the <a href="http://monash.edu/proteomics">Monash Proteomics Facility</a>.  <br>
 Source code hosted at <a href="http://github.com/boscoh/peptagram">http://github.com/boscoh/peptagram</a> under BSD license.   <br>
 &copy; 2013. Bosco K. Ho.</p>          </div>

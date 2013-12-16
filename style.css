@@ -1,16 +1,19 @@
 h1 {
-  font-size: 50px; }
+  font-size: 40px; }
 
   h2 {
-    font-size: 45px; }
+    font-size: 35px; }
 
-    h3 {
-      margin-top: 60px;
-      border-bottom: 1px solid #BBB; }
+    h1, h2, h3, h4, h5, h6, h7 {
+      font-weight: 100;
+      letter-spacing: 0.1em; }
 
-      h1, h2, h3, h4, h5, h6, h7 {
-        font-weight: 100;
-        letter-spacing: 0.1em; }
+      h3 {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 18px;
+        color: #AAA;
+        border-bottom: 1px solid #BBB; }
 
         .navbar-static-top {
           margin-bottom: 0; }
@@ -36,36 +39,51 @@ h1 {
                     #plaintext {
                       background-color: #F9F9FF; }
 
-                      #footer {
-                        background-color: #336;
-                        color: #999; }
+                      #plaintext h3, #tintedtext h3 {
+                        padding-top: 1em; }
 
-                        #screenshot, #plaintext, #tintedtext, #footer {
-                          padding-top: 40px;
-                          padding-bottom: 40px;
-                          font-size: 16px;
-                          letter-spacing: 0.1em;
-                          line-height: 2em; }
+                        #footer {
+                          background-color: #336;
+                          color: #999; }
 
-                          @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-                            #banner {
-                              padding-top: 20px;
-                              padding-bottoM: 20px;   }
-                              #banner h1 {
-                                font-size: 30px;   }
-                                h1 {
-                                  font-size: 22px;   }
-                                  h2 {
-                                    font-size: 20px;   }
-                                    h3 {
-                                      font-size: 18px;   }
-                                      #banner h4 {
-                                        font-size: 16px;   }
-                                        #screenshot, #plaintext, #tintedtext, #footer {
-                                          padding: 20px 0px;
-                                          font-size: 10px;
-                                          letter-spacing: 0.05em;
-                                          line-height: 1.3em;   }
-                                          code, pre {
-                                            font-size: 10px;   }
+                          #screenshot, #plaintext, #tintedtext, #footer {
+                            padding-top: 40px;
+                            padding-bottom: 40px;
+                            font-size: 16px;
+                            letter-spacing: 0.1em;
+                            line-height: 1.7em; }
+
+                            code {
+                              font-size: 16px;
+                              letter-spacing: 0em; }
+
+                              pre {
+                                line-height: 1.2em;
+                                letter-spacing: 0em;
+                                color: #777; }
+
+                                @media (max-width : 767px) {
+                                  #banner {
+                                    padding-top: 20px;
+                                    padding-bottoM: 20px;   }
+                                    #banner h1 {
+                                      font-size: 30px;   }
+                                      h1 {
+                                        font-size: 22px;   }
+                                        h2 {
+                                          font-size: 20px;   }
+                                          h3 {
+                                            font-size: 18px;   }
+                                            h1, h2, h3 {
+                                              margin-top: 0px;   }
+                                              #banner h4 {
+                                                font-size: 16px;   }
+                                                #screenshot, #plaintext, #tintedtext, #footer {
+                                                  padding: 20px 0px;
+                                                  font-size: 14px;
+                                                  letter-spacing: 0.05em;
+                                                  line-height: 1.5em;   }
+                                                  code, pre {
+                                                    font-size: 10px;
+                                                    line-height: 1.2em;   }
 }
