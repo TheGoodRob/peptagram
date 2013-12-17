@@ -19,9 +19,9 @@
             %li
               %a{href:'index.html'} home
             %li
-              %a{href:'vizhelp.html'} viz help
+              %a{href:'vizhelp.html'} visualisation help
             %li
-              %a{href:'vizgen.html'} viz generation
+              %a{href:'vizgen.html'} visualisation generation
             %li.active
               %a{href:'api.html'} programming api
     #banner
@@ -34,7 +34,7 @@
     #plaintext
       .container
         .row
-          .col-lg-6.col-md-7.col-sm-8
+          .col-lg-7.col-md-7.col-sm-8
             :markdown
 
               # Python Programming API
@@ -129,7 +129,7 @@
 
               ### Protein sequences
 
-              Loading protein sequences in the `proteins` is a necessary step in `peptogram` as it is required to generate the visualizations. As well, it is necessary to view the protein. Several of the proteomics data formats do not provide this information and so we need to read in the fasta sequences from another source.
+              Loading protein sequences in the `proteins` is a necessary step in `peptogram` as it is required to generate the visualisations. As well, it is necessary to view the protein. Several of the proteomics data formats do not provide this information and so we need to read in the fasta sequences from another source.
 
               The most common source is a `.fasta` file, preferably one that was used for the peptide search. To load the correct sequence, the sequence identifiers between the peptide-spectrum matches and the fasta files must much. We offer where the protein sequences used in the peptide serch are The different data formats AnAdd uniprot metadata, and reorganization of data.
 
@@ -190,7 +190,7 @@
     #footer
       .container
         .row
-          .col-lg-6.col-md-7.col-sm-8
+          .col-lg-7.col-md-7.col-sm-8
             :markdown
                 `peptagram` was developed at the [Monash Proteomics Facility](http://monash.edu/proteomics).  <br>
                 Source code hosted at <http://github.com/boscoh/peptagram> under BSD license.   <br>

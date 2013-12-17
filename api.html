@@ -23,10 +23,10 @@
               <a href='index.html'>home</a>
             </li>
             <li>
-              <a href='vizhelp.html'>viz help</a>
+              <a href='vizhelp.html'>visualisation help</a>
             </li>
             <li>
-              <a href='vizgen.html'>viz generation</a>
+              <a href='vizgen.html'>visualisation generation</a>
             </li>
             <li class='active'>
               <a href='api.html'>programming api</a>
@@ -49,7 +49,7 @@
     <div id='plaintext'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-6 col-md-7 col-sm-8'>
+          <div class='col-lg-7 col-md-7 col-sm-8'>
 
 <h1>Python Programming API</h1>
 <h3>Basic Data Structure: proteins</h3>
@@ -137,7 +137,7 @@ def change_seqid(seqid):
 peptagram.proteins.change_seqids_in_proteins(proteins, clean_seqid)
 </code></pre>
 <h3>Protein sequences</h3>
-<p>Loading protein sequences in the <code>proteins</code> is a necessary step in <code>peptogram</code> as it is required to generate the visualizations. As well, it is necessary to view the protein. Several of the proteomics data formats do not provide this information and so we need to read in the fasta sequences from another source.</p>
+<p>Loading protein sequences in the <code>proteins</code> is a necessary step in <code>peptogram</code> as it is required to generate the visualisations. As well, it is necessary to view the protein. Several of the proteomics data formats do not provide this information and so we need to read in the fasta sequences from another source.</p>
 <p>The most common source is a <code>.fasta</code> file, preferably one that was used for the peptide search. To load the correct sequence, the sequence identifiers between the peptide-spectrum matches and the fasta files must much. We offer where the protein sequences used in the peptide serch are The different data formats AnAdd uniprot metadata, and reorganization of data.</p>
 <pre><code>import peptogram.proteins
 
@@ -194,7 +194,7 @@ source_labels = [os.path.basename(name) for name in source_names]
     <div id='footer'>
       <div class='container'>
         <div class='row'>
-          <div class='col-lg-6 col-md-7 col-sm-8'>
+          <div class='col-lg-7 col-md-7 col-sm-8'>
 <p><code>peptagram</code> was developed at the <a href="http://monash.edu/proteomics">Monash Proteomics Facility</a>.  <br>
 Source code hosted at <a href="http://github.com/boscoh/peptagram">http://github.com/boscoh/peptagram</a> under BSD license.   <br>
 &copy; 2013. Bosco K. Ho.</p>          </div>
