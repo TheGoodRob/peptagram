@@ -72,7 +72,7 @@
 
               &nbsp;&nbsp;
               <a class='btn btn-primary' type='button' href='http://monash.edu/proteomics/peptagram/examples-0.1a.zip'>
-                Download Examples
+                Download Examples (~135MB)
               </a> 
 
               For a fully realized visualisation, `peptagram` requires:
@@ -145,7 +145,7 @@
 
               The `data` dictionary is then passed into the function that generates the visualisation web-app in the indicated directory:
 
-                  peptagram.proteins.make_overview_visualisation(
+                  peptagram.proteins.make_sequence_overview_visualisation(
                       data, 'morpheus/overview')
 
               Which is run on the command-line in the examples directory:
@@ -215,7 +215,7 @@
                     'color_names': ['P=1', 'P=0', ''],
                     'mask_labels': [protein_error],
                   }
-                  peptagram.proteins.make_overview_visualisation(
+                  peptagram.proteins.make_sequence_overview_visualisation(
                     data, 'tpp/overview')
 
     #tintedtext
@@ -274,7 +274,7 @@
                     'color_names': ['P=1', 'P=0', ''],
                     'mask_labels': errors,
                   }
-                  peptagram.proteins.make_comparison_visualisation(
+                  peptagram.proteins.make_graph_comparison_visualisation(
                       data, 'xtandem/comparison')
 
 
@@ -343,7 +343,7 @@
                     'color_names': ['P=1', 'P=0', ''],
                     'mask_labels': [],
                   }
-                  peptagram.proteins.make_comparison_visualisation(
+                  peptagram.proteins.make_graph_comparison_visualisation(
                       data, 'mascot/comparison')
 
     #tintedtext
@@ -392,7 +392,7 @@
                     'color_names': ['1.5', '1', '0.66'],
                     'mask_labels': [],
                   }
-                  peptagram.proteins.make_comparison_visualisation(
+                  peptagram.proteins.make_graph_comparison_visualisation(
                     data, 'maxquant/comparison')
 
     #footer

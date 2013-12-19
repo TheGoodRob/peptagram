@@ -38,11 +38,10 @@
     #header {
       width: 100%;
       text-align: center;
-      font-weight: bold;
       text-transform: uppercase;
-      font-size: 30px;
-      font-weight: bold;
-      padding: 30px 0px 20px 0px;
+      font-size: 25px;
+      font-weight: normal;
+      padding: 10px 0px 10px 0px;
     }
     #column1, #column2, #column3 {
       position: absolute;
@@ -53,7 +52,9 @@
     #column1, #column2 {
       margin-left: 5px;
       margin-right: 5px;
-      width: 350px;
+    }
+    #column1 {
+      width: 250px;
     }
     #column2 {
       width: 400px;
@@ -69,6 +70,7 @@
     }
     #protein_info {
       margin-bottom: 10px;
+      overflow: scroll;
     }
     #peptograph {
       position: absolute;
@@ -133,24 +135,42 @@
       width: 100%;
       text-align: center;
     }
+    .gap {
+      height: 10px;
+      width: 100%;
+      background-color: white;
+    }
+    #watermark {
+      text-align: right;
+      font-size: 12px;
+      padding: 3px;
+    }
+    #watermark a,
+    #watermark a:visited {
+      color: #AAA;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
+  <div id="watermark">
+    <a href="http://boscoh.github.com/peptagram/vizhelp.html">PEPTAGRAM&#183;HELP</a>
+  </div>
   <div id="header">Peptograph analysis of Sample</div>
   <div id="column1">
-    <div class="title">PROTEIN LIST - PRESS [N][P]</div>
+    <div class="title">PROTEINS - PRESS [N][P]</div>
     <div id="protein_control"></div>
     <div id="protein_list"></div>
   </div>
   <div id="column2">
-    <div class="title">PROTEIN</div>
+    <div class="title">PROTEIN INFO</div>
     <div id="protein_info"></div>
     <div id="sequence"></div>
-    <div id="peptide_list_title" class="title">PEPTIDE LIST - PRESS [J][K]</div>
+    <div id="peptide_list_title" class="title">PEPTIDE-SPECTRUM MATCHES - PRESS [J][K]</div>
     <div id="peptide_list"></div>
   </div>
   <div id="column3">
-    <div class="title">PEPTIDE-SPECTRUM MATCH</div>
+    <div class="title">PEPTIDE-SPECTRUM MATCH INFO</div>
     <div id="peptide_info"></div>
     <div id="spectrum"></div>
     <div id="ion_table"></div>
