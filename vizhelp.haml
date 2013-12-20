@@ -39,12 +39,26 @@
 
               # HTML5 Visualisation Guide 
 
-              The visalization presents an integrated display of:
+              The `peptagram` visualisation presents an overview of a proteomics experiments, organized around identified proteins, and their peptides.
 
-              - peptide distributions for identified proteins
-              - single-sequence/comparison-distribution display
-              - peptide-spectrum matches
-              - optional top 50 MS/MS peaks for each peptide-spectrum match
+              There are two modes:
+
+              1. Sequence Overview of a single experiment
+              2. Graphical Comparison of multiple experiments
+
+              In both modes, the display consists of:
+
+              - list of identified proteins
+              - detailed view of selected protein
+              - info panel for selected protein
+              - list of peptides used to identify proteins
+              - info panel for selected peptide-spectrum match
+              - optionally, a viewer of the spectrum with matched peaks
+
+              ### The Modes of the Protein View
+              **1. Sequence Overview of a Single Experiment**: the detailed protein view shows the entire sequence of the protein rendered in an easy to scan 5 character blocks, with the peptides identified tintedtexted as clickable links
+
+              **2. Graphical Comparison of Multiple Experiments**: the detailed protein view shows a table-based graphic, where each row represents the same protein but for each separate experiment. Each row displays the peptides displayed in that particular experiment, and the graphic provides a quick way to scan through different experiments.
 
               ### Protein List
               All identified proteins are shown on the left, withe the peptides illustrated in a the bar graph. All proteins are normalized to the same width of the screen as there is too great a difference between protein sequence lengths to show this in proportion. Clicking on a protein on this light will bring up a detailed display of the sequence, with the peptides tintedtexted by clickable links. This list can be sorted by the pop-up menu at the top of the section. All attributes displayed in the protein info panel can be sorted against.
@@ -59,7 +73,7 @@
               ### Searching 
               Can be done using the built-in web-browser search. All the text for the proteins, and principal seqid are always available in the protein-list view, and thus searchable.
 
-              ### Peptide-Spectrum Matches 
+              ### Peptide-Spectrum Match List 
               Below that is the list of peptide spectrum matches, listed by their positions in the sequence and the sequnce. If modifications were read in, they will be tintedtexted. Click on thes will display the MS/MS spectra if available.
 
               ### Spectrum Viewer 
@@ -75,21 +89,16 @@
               hash references
 
 
-              ### Single 
-              Experiment Mode
-              In the single-experiment mode, the central panel shows the entire sequence of the protein rendered in an easy to scan 5 x 5 blocks, with the the peptides identified tintedtexted as clickable links
 
-              ### Experiment Comparison Mode
-              In the experiment-comparison mode, the central model shows an interactive display where, for a selected protein, the central panel shows a display consisting of rows. Each row represents the peptides identified for each separate experiment.
 
     #footer
       .container
         .row
           .col-lg-7.col-md-7.col-sm-8
             :markdown
-              `peptagram` was developed at the [Monash Proteomics Facility](http://monash.edu/proteomics).  <br>
-              Source code hosted at <http://github.com/boscoh/peptagram> under BSD license.   <br>
-              &copy; 2013. Bosco K. Ho.
+              Developed at the [Monash Proteomics Facility](http://monash.edu/proteomics).  <br>
+              Source code hosted at <http://github.com/boscoh/peptagram>.   <br>
+              Copyright &copy; 2013, Bosco K. Ho.
 
     %script{src:'jquery-1.10.2.min.js'}
     %script{src:'bootstrap/js/bootstrap.js'}
