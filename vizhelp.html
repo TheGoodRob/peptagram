@@ -67,28 +67,41 @@
 <li>info panel for selected peptide-spectrum match</li>
 <li>optionally, a viewer of the spectrum with matched peaks</li>
 </ul>
-<h3>Protein List</h3>
-<p>All identified proteins are shown on the left, withe the peptides illustrated in a the bar graph. All proteins are normalized to the same width of the screen as there is too great a difference between protein sequence lengths to show this in proportion. Clicking on a protein on this light will bring up a detailed display of the sequence, with the peptides tintedtexted by clickable links. This list can be sorted by the pop-up menu at the top of the section. All attributes displayed in the protein info panel can be sorted against.</p>
-<h3>The Modes of the Detailed Protein View</h3>
-<p><strong>1. Sequence Overview of a Single Experiment</strong>: the detailed protein view shows the entire sequence of the protein rendered in an easy to scan 5 character blocks, with the peptides identified tintedtexted as clickable links</p>
-<p><strong>2. Graphical Comparison of Multiple Experiments</strong>: the detailed protein view shows a table-based graphic, where each row represents each separate experiment. Each row displays the peptides found in that particular experiment. This provides a quick way to scan through different experiments.</p>
+<h3>List of Proteins</h3>
+<p>This shows all the identified proteins, recognized as unique in the protein groupings.</p>
+<p>The peptides used to identify the protein are displayed in the bar graph below . The display width are all normalized to be the same as there is too great a variation between protein sequence lengths to show this in proportion.</p>
+<p>Clicking on a protein will bring up the protein information in the Protein Info panel.</p>
+<p>The Protein List can be sorted by the pop-up menu at the top of the section. The choice of sorting attributes depend on the available keys as displayed in the Protein Info panel.</p>
+<h3>The Detailed Protein View</h3>
+<p>This view is the primary difference between in the two different modes of <code>peptagram</code> b:</p>
+<ol>
+<li>
+<p>Sequence Overview of a Single Experiment: the  entire sequence of the protein rendered in easy-to-scan blocks of 5 characters. The peptides are displayed as links, and the first peptide-spectrum match corresponding to the peptide will be thus selected.</p>
+</li>
+<li>
+<p>Graphical Comparison of Multiple Experiments: the view shows a table-based graphic, where each row represents each separate experiment. Each row displays the peptides found in the protein that particular experiment. This provides a quick way to scan through different experiments. Immediately below is a scrollable view of the sequence displayed horizontally, revealing the part of the graphic that has been recently clicked.</p>
+</li>
+</ol>
 <h3>Keyboard Shortcuts</h3>
-<p>Several keyboard shortcuts have been included, and these are labeled above the sub-headings of the relevant section. These are:</p>
+<p>Several keyboard shortcuts have been included, and these are labeled above the sub-headings of the relevant section.</p>
+<p>These are:</p>
 <ul>
 <li><code>N</code> and <code>P</code>: to move through proteins in the protein list</li>
 <li><code>J</code> and <code>K</code>: to move through the peptide-spectrum matches</li>
 <li><code>U</code> and <code>D</code>: to move between experiments in the comparison mode</li>
 </ul>
 <h3>Searching</h3>
-<p>Can be done using the built-in web-browser search. All the text for the proteins, and principal seqids are always available in the protein-list view, and thus searchable.</p>
+<p>Searching is designed to be carried out using the built-in web-browser search. As the text for all the proteins are embedded in the Protein List, these are available for the web-browser search function to find.</p>
 <h3>Peptide-Spectrum Match List</h3>
-<p>Below that is the list of peptide spectrum matches, listed by their positions in the sequence and the sequnce. If modifications were read in, they will be tintedtexted. Clicking on these will display the MS/MS spectra if available.</p>
+<p>The peptide-spectrum matches are displayed as a list of peptides, with modifications highlighted. Multiple matches of the same peptide will have multiple entries, resulting in repeats of the peptides. Clicking on a peptide will display the corresponding MS/MS spectra if available in the Spectrum Viewr.</p>
 <h3>Spectrum Viewer</h3>
-<p>If the MS/MS spectra have been loaded then, if a peptide-spectrum match is clicked, a simple spectrum viewer is shown of the top 50 peaks found in the peptide-spectrum match. Below the viewer is an interactive ion table, showing b-ions and y-ions. By click on the labels at the top of the table, different charge states for the b-ions and y-ions are displayed, both in the the table and the spectrum viewer. Clicking on the viewer will zoom to the nearest peak, where the viewer will scale to the height of the zoomed peak, which should now be in the middle of the viewer. Clicking again on the viewer will zoom out. The viewer automatically scales to the minimum-maxium peak m/z values.</p>
+<p>If the MS/MS spectra have been loaded then, if a peptide-spectrum match is clicked, a simple spectrum viewer is shown of the top 50 peaks found in the peptide-spectrum match.</p>
+<p>Below the viewer is an interactive ion table, showing b-ions and y-ions. By click on the labels at the top of the table, different charge states for the b-ions and y-ions are displayed, both in the the table and the spectrum viewer.</p>
+<p>Clicking on the viewer will zoom to the nearest peak, where the viewer will scale to the height of the zoomed peak, which should now be in the middle of the viewer. Clicking again on the viewer will zoom out. The viewer automatically scales to the minimum-maxium peak m/z values.</p>
 <h3>Zooming</h3>
-<p>The web-app has been built to be page-responsive, that means the display responds appropriately to both page resizes and zooming. Just use the browser's built-in zoom function to increase the proportions.</p>
+<p>The web-app has been built to be page-responsive - the page responds appropriately to both page resizes and zooming. Just use the browser's built-in zoom function to increase the font-size, and relative sizes of the different columns.</p>
 <h3>Multiple views</h3>
-<p>One thing that web-pages automatically give you is multiple views to the same document. Re-opening the <code>index.html</code> file will open up a second copy of the web-app. This allows convenient comparison of different proteins by placing the opened pages side-by-side.</p>
+<p>One extremely convenient function of the web-browser is that it can open multiple copies of the same web-page. Thus, you can open multiple copies of the same <code>peptagram</code> visualization, allowing conveninent on-screen comparisons.</p>
 <h3>To-do</h3>
 <p>hash references
 optimize for touch interface</p>          </div>
