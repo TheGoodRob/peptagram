@@ -1,6 +1,6 @@
 
 
-# PEPTAGRAM - ROB'S AWESOMEST VERSION
+# PEPTAGRAM - THEGOODROB'S VERSION
 
 
 `peptagram` generates a single-page HTML5 web-app to visualize proteomics analyses for:
